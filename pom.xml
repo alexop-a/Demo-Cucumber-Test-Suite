@@ -1,0 +1,154 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>io.github.alexop-a</groupId>
+	<artifactId>demo-cucumber-test-suite</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>Demo Cucumber Test-Suite</name>
+	<description>This is a project based on Cucumber JVM, Junit5 and Spring. It
+		contains some feature files for a demo application. The purpose of the
+		test-suite is not to perform any real testing, but it can be used to
+		test some java cucumber related functionality and generate test reports.</description>
+	<url>https://github.com/alexop-a/Demo-Cucumber-Test-Suite</url>
+
+
+	<developers>
+		<developer>
+			<name>Andreas Alexopoulos</name>
+			<email>alexop.a@gmail.com</email>
+			<organization>alexop-a</organization>
+			<organizationUrl>https://alexop-a.github.io/</organizationUrl>
+		</developer>
+	</developers>
+	
+	<properties>
+		<lombok.version>1.18.34</lombok.version>
+		<maven-clean-plugin.version>3.4.0</maven-clean-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<spring-boot.version>3.3.5</spring-boot.version>
+		<cucumber-java.version>7.20.1</cucumber-java.version>
+		<junit-jupiter.version>5.11.3</junit-jupiter.version>
+		<maven-failsafe-plugin.version>3.5.1</maven-failsafe-plugin.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.junit</groupId>
+				<artifactId>junit-bom</artifactId>
+				<version>${junit-jupiter.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<!--			<scope>test</scope>-->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber-java.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-spring</artifactId>
+			<version>${cucumber-java.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit-platform-engine</artifactId>
+			<version>${cucumber-java.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-suite</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>${maven-clean-plugin.version}</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>test-output</directory>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<release>17</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<scm>
+		<url>https://github.com/alexop-a/Demo-Cucumber-Test-Suite.git</url>
+		<connection>scm:git:https://github.com/alexop-a/Demo-Cucumber-Test-Suite.git</connection>
+		<developerConnection>scm:git:https://github.com/alexop-a/Demo-Cucumber-Test-Suite.git</developerConnection>
+		<tag>v@{project.version}</tag>
+	</scm>
+</project>
