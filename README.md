@@ -1,5 +1,5 @@
 # Demo-Cucumber-Test-Suite
- 
+
 This is a project based on Cucumber JVM, Junit5 and Spring. It contains some feature files for a demo application. The purpose of the test-suite is not to perform any real testing, but it can be used to test some java cucumber related functionality and generate test reports.
 
 ## Test-Suite Configuration
