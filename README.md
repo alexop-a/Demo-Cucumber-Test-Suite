@@ -9,8 +9,8 @@ The following properties are available:
 | Property Name | Default Value  | Description |
 |--|--|--|
 | demo-cucumber.suite.failThreashold | 10 | It defines a percentage that is the probability of a validation step to fail, based on a random-util class |
-| demo-cucumber.suite.minStepDurationDelay | 100L | It defines the minimum step delay that will be applied on a step |
-| demo-cucumber.suite.maxStepDurationDelay | 1000L | It defines the maximum step delay that will be applied on a step |
+| demo-cucumber.suite.minStepDurationDelay | 100L | It defines the minimum step delay that will be applied on a step. Value is in milliseconds |
+| demo-cucumber.suite.maxStepDurationDelay | 1000L | It defines the maximum step delay that will be applied on a step. Value is in milliseconds |
 
 ## Attachments
 Based on some tags, it is possible to generate attachments and add them on a scenario in an AfterHook step.
