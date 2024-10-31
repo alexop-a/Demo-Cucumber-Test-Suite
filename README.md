@@ -8,7 +8,7 @@ The following properties are available:
 
 | Property Name | Default Value  | Description |
 |--|--|--|
-| demo-cucumber.suite.failThreashold | 10 | It defines a percentage that is the probability of a validation step to fail, based on a random-util class |
+| demo-cucumber.suite.failThreashold | 10 | It defines a percentage that is the probability of a validation step to fail, based on a random-util class. Value of 0 means no failures and value of 100 that all validation steps will fail |
 | demo-cucumber.suite.minStepDurationDelay | 100L | It defines the minimum step delay that will be applied on a step. Value is in milliseconds |
 | demo-cucumber.suite.maxStepDurationDelay | 1000L | It defines the maximum step delay that will be applied on a step. Value is in milliseconds |
 
